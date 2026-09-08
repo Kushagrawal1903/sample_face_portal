@@ -116,10 +116,12 @@ export async function saveStudentFace(record: StudentSampleRecord): Promise<{ su
         return { success: true, id: data.id };
       }
       if (error) {
-        console.error('[Supabase Error]', error);
+        console.error('[Supabase Insert Error]', error);
+        return { success: false, id: 0, message: `Supabase Error: ${error.message}` };
       }
-    } catch (e) {
+    } catch (e: any) {
       console.error('[Supabase Exception]', e);
+      return { success: false, id: 0, message: `Database Exception: ${e.message || e}` };
     }
   }
 

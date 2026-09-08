@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Student Face Biometric Portal | College Attendance System",
-  description: "Secure student facial biometric verification and dataset registration portal.",
+  title: "Campus Active App (Beta) | Face Biometric Portal",
+  description: "New Campus Active App Beta Testing - 4-Angle Facial Biometrics Registration Portal.",
 };
 
 export const viewport: Viewport = {
